@@ -101,7 +101,7 @@ public:
         {
             error = lfg::LFG_TELEPORTERROR_FATIGUE;
         }
-        else if (player->GetVehicle())
+        else if (player->GetVehicle() || player->HasUnitState(UNIT_STATE_IN_FLIGHT)) 
         {
             error = lfg::LFG_TELEPORTERROR_IN_VEHICLE;
         }
